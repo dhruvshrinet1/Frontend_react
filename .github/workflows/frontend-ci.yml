@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'Frontend_react/**'  # Runs only if frontend code changes
+      - 'frontend_react/**'  # Runs only if frontend code changes
 
 env:
   DOCKER_FRONTEND_IMAGE: ${{ secrets.DOCKER_USERNAME }}/lms-frontend
@@ -32,7 +32,7 @@ jobs:
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
         with:
-          context: ./Frontend_react
+          context: ./frontend_react
           platforms: linux/amd64,linux/arm64
           push: true
           no-cache: true
