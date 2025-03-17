@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'frontend_react/**'  # Runs only if frontend code changes
+      - 'Frontend_react/**'  # Runs only if frontend code changes
 
 env:
   DOCKER_FRONTEND_IMAGE: ${{ secrets.DOCKER_USERNAME }}/lms-frontend
